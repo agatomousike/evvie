@@ -11,6 +11,9 @@ public class Kontroler {
 		System.out.println("czas " + gracz.getCzasGry());
 		System.out.println("punkty " + gracz.getPunktyGracza());
 		
+		PozycjaNaPlanszy poz = PozycjaNaPlanszy.P10;
+		System.out.println("enumeracja pozycja: " +poz.getValue());
+		
 	}
 
 }
