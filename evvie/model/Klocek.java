@@ -1,9 +1,15 @@
 package evvie.model;
 
 public class Klocek {
-	final LiczbaSegementow liczbaSegmentow;
-	final OrientacjaKlocka orientacja;
-	PozycjaNaPlanszy pozycjaNaPlanszy;
+	private LiczbaSegementow liczbaSegmentow;
+	private OrientacjaKlocka orientacja;
+	private PozycjaNaPlanszy pozycjaNaPlanszy;
+	
+	public Klocek() {
+		this.liczbaSegmentow = LiczbaSegementow.DWA; /*domyœlnie*/
+		this.orientacja = OrientacjaKlocka.POZIOM; /*domyœlnie*/
+		this.pozycjaNaPlanszy = PozycjaNaPlanszy.P0; /*domyœlnie - poza plansza */
+	}
 	
 	public Klocek(LiczbaSegementow liczbaSegmentow,
 			OrientacjaKlocka orientacja, PozycjaNaPlanszy pozycjaNaPlanszy) {
@@ -11,6 +17,14 @@ public class Klocek {
 		this.liczbaSegmentow = liczbaSegmentow;
 		this.orientacja = orientacja;
 		this.pozycjaNaPlanszy = pozycjaNaPlanszy;
+	}
+
+	public void setLiczbaSegmentow(LiczbaSegementow liczbaSegmentow) {
+		this.liczbaSegmentow = liczbaSegmentow;
+	}
+
+	public void setOrientacja(OrientacjaKlocka orientacja) {
+		this.orientacja = orientacja;
 	}
 
 	public Klocek(LiczbaSegementow liczbaSegmentow, OrientacjaKlocka orientacja) {
